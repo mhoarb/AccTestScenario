@@ -16,7 +16,7 @@ Feature: Admin Panel Login, Dashboard, and Comments Management
     Then the user is redirected to the unconfirmed comments management page
     And a list of unconfirmed comments is displayed
 
-  Scenario: Confirm a comment //have error
+  Scenario: Confirm a comment 
     Given the user is logged into the admin panel as "superadmin"
     And the user is on the unconfirmed comments management page
     When the user selects an unconfirmed comment
@@ -25,7 +25,7 @@ Feature: Admin Panel Login, Dashboard, and Comments Management
     And the comment is removed from the unconfirmed list
     And a success message is displayed
 
-  Scenario: Reject a comment //have a err
+  Scenario: Reject a comment 
     Given the user is logged into the admin panel as "superadmin"
     And the user is on the unconfirmed comments management page
     When the user selects an unconfirmed comment
