@@ -7,7 +7,7 @@ Feature: Admin Panel Login, Dashboard, and Online Center
 
     Scenario: Verify online center table structure for Number of Online Centers
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the page loads
         Then the table displays the following columns:
             | Column Name                    |
@@ -27,14 +27,14 @@ Feature: Admin Panel Login, Dashboard, and Online Center
 
     Scenario: Activate a row in the online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user toggles the switch to activate a deactivated row
         Then the row status updates to active and show this message "با موفقیت ویرایش شد"
         And the change is reflected in the table
 
     Scenario: Deactivate a row in the online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user toggles the switch to deactivate an activated row
         Then the row status updates to active 
         And show this message "با موفقیت ویرایش شد"
@@ -42,7 +42,7 @@ Feature: Admin Panel Login, Dashboard, and Online Center
 
     Scenario: Delete a row from the online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user selects a row
         And the user clicks the delete action
         And the user confirms the deletion
@@ -51,7 +51,7 @@ Feature: Admin Panel Login, Dashboard, and Online Center
 
     Scenario: Edit a row in the online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user selects a row
         And the user clicks the edit action
         And the user modifies the row details
@@ -61,21 +61,21 @@ Feature: Admin Panel Login, Dashboard, and Online Center
 
     Scenario: View comments for a row in the online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user selects a row
         And the user clicks the view comments action
         Then new page displays the comments associated with the row
 
     Scenario: View tickets for a row in the online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center table at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center table at https://admin-club.farazpardazan.com/customer-level
         When the user selects a row
         And the user clicks the view tickets action
         Then new page displays the tickets associated with the row
 
     Scenario: Register a new purchase center "ثبت مرکز خرید"
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user clicks the option to register a new purchase center
         And the user enters valid details for the new center
         And the user submits the registration
@@ -84,35 +84,35 @@ Feature: Admin Panel Login, Dashboard, and Online Center
 
     Scenario: Filter online center table by title "عنوان"
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user enters a title in the filter field
         And the user applies the filter
         Then the table displays only rows matching the entered title
 
     Scenario: Filter online center table by purchase code less than
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user enters a purchase code threshold in the filter field
         And the user applies the filter
         Then the table displays only rows with purchase codes less than the entered threshold
 
     Scenario: Filter online center table by expiration date
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user enters an expiration date in the filter field
         And the user applies the filter
         Then the table displays only rows with expiration dates matching or before the entered date
 
     Scenario: Export online center table to Excel
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         When the user clicks the export to Excel option
         Then a file is downloaded in Excel format
         And the file contains all visible table data
 
     Scenario: Perform pagination on online center table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/onlineCenter
+        And the user is on the online center page at https://admin-club.farazpardazan.com/customer-level
         And the table contains more rows than the page limit
         When the user navigates to the next page using the pagination controls
         Then the next set of rows is displayed
