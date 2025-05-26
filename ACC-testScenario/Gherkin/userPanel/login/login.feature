@@ -6,11 +6,11 @@ Feature: User Login to Farazpardazan Club
   Scenario: Successful login with valid username and password
     Given the user is on the login page of https://club.farazpardazan.com/
     When the user enters the username "0071056734"
-    And the user enters a valid password
+    And the user enters a valid PASSWORD{?}
     And the user clicks the login button
     Then the user is redirected to the account dashboard
     And a welcome message is displayed
-
+@edgeCase
   Scenario: Failed login with invalid username
     Given the user is on the login page of https://club.farazpardazan.com/
     When the user enters an invalid username "invaliduser"
@@ -18,7 +18,7 @@ Feature: User Login to Farazpardazan Club
     And the user clicks the login button
     Then an error message is displayed saying "Invalid username or password"
     And the user remains on the login page
-
+@edgeCase
   Scenario: Failed login with invalid password
     Given the user is on the login page of https://club.farazpardazan.com/
     When the user enters the username "0071056734"
