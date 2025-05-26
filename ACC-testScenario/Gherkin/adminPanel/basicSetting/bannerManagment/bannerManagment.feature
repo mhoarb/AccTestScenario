@@ -7,7 +7,7 @@ Feature: Admin Panel -Banner Management
 
     Scenario: Navigate to banners management page
         Given the user is logged into the admin panel as "superadmin"
-        When the user navigates to the banners management page at https://admin-ccd.farazpardazan.com/banners
+        When the user navigates to the banners management page at https://admin-club.farazpardazan.com/banners
         Then the user is directed to the banners page
         And a table of banners is displayed
 
@@ -15,7 +15,7 @@ Feature: Admin Panel -Banner Management
 
     Scenario: Edit a banner
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the banners page at https://admin-ccd.farazpardazan.com/banners
+        And the user is on the banners page at https://admin-club.farazpardazan.com/banners
         And the user clicks the edit action (pencil icon)
         And the user modifies the banner details
         And the user saves the changes
@@ -24,7 +24,7 @@ Feature: Admin Panel -Banner Management
 
     Scenario: Delete a banner
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the banners page at https://admin-ccd.farazpardazan.com/banners
+        And the user is on the banners page at https://admin-club.farazpardazan.com/banners
         And the user clicks the delete action (trash icon)
         And the user confirms the deletion
         Then the banner is removed from the table
@@ -32,7 +32,7 @@ Feature: Admin Panel -Banner Management
 
     Scenario: Register a new banner
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the banners page at https://admin-ccd.farazpardazan.com/banners
+        And the user is on the banners page at https://admin-club.farazpardazan.com/banners
         When the user clicks the "ثبت بنر جدید" button
         And the user enters valid banner details
         And the user submits the registration
@@ -42,7 +42,7 @@ Feature: Admin Panel -Banner Management
 
     Scenario: Export online center table to Excel
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the online center page at https://admin-ccd.farazpardazan.com/banners
+        And the user is on the online center page at https://admin-club.farazpardazan.com/banners
         When the user clicks the export to Excel option
         Then a file is downloaded in Excel format
         And the file contains all visible table data
@@ -50,7 +50,7 @@ Feature: Admin Panel -Banner Management
 
     Scenario: Perform pagination on banners table
         Given the user is logged into the admin panel as "superadmin"
-        And the user is on the banners page at https://admin-ccd.farazpardazan.com/banners
+        And the user is on the banners page at https://admin-club.farazpardazan.com/banners
         And the table contains more rows than the page limit
         When the user navigates to the next page using the pagination controls
         Then the next set of banners is displayed

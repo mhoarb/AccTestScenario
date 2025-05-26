@@ -7,7 +7,7 @@ Feature: Admin Panel Login, Dashboard, and Comments Management
 
  Scenario: Navigate to unconfirmed comments page
     Given the user is logged into the admin panel as "superadmin"
-    And the user is on the admin dashboard at https://admin-ccd.farazpardazan.com/dashboard
+    And the user is on the admin dashboard at https://admin-club.farazpardazan.com/dashboard
     When the user clicks the "مشاهده" button for "نظرات تایید نشده"
     Then the user is redirected to the unconfirmed comments management page
     And a list of unconfirmed comments is displayed
